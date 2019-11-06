@@ -1,0 +1,40 @@
+           <!DOCTYPE html>
+           <html lang="pt-br">
+           <head>
+              <title> Casa de Câmbio</title>
+              <link rel="stylesheet" type="text/css" href="css/estilo.css">
+              <meta charset="utf-8">
+              <script type="text/javascript">
+                  function dolarPARAreal(){
+                    valor = prompt("Digite o valor da Cotação","")
+                    dolar = prompt("Digite o valor em dólar!","")
+                    dolarconvertido = dolar * valor
+                    alert("Operação realizada com sucesso! R$ " + dolarconvertido.toFixed(2))
+
+            }
+             function realPARAdolar(){
+             valor2 = prompt("Digite o valor da Cotação","")
+             real = prompt("Digite o valor em Real (R$)!","")
+            realconvertido = real / valor2
+             alert("Operação realizada com sucesso! R$ " + realconvertido.toFixed(2))
+
+            }
+            
+          </script>
+        </head>
+        <body bgcolor="#ffa500">
+        <body>
+        <div class="moeda">
+        <h2>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspConversor</h2>
+        <p>&nbsp&nbsp&nbsp&nbsp&nbspEscolha a Conversão:</p>
+        <form>
+          <input type="button" style="width: 200px; height: 50px" name="dolarreal" value="DÓLAR -> REAL" onClick="dolarPARAreal()">
+          <input type="button" style="width: 200px; height: 50px" name="realdolar" value="REAL -> DÓLAR" onClick="realPARAdolar()">
+        </div>
+        </form>
+      </body>
+      </html>
+
+
+
+          

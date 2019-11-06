@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Calculadora de Valores</title>
+  <style>
+      body {
+         margin: 40px;
+         background-color: #ffa500; 
+         font-size: 20px;
+      }
+
+  #estilo {
+          background-color:#cecece;
+          width: 200px;
+          padding: 10px;
+      }
+
+  #resultado {
+        border: 2px solid black;
+        padding: 15px;
+
+  }
+
+   </style>
+  </head>
+ <body>
+   <div id="resultado">
+      <h1> Conversor Milhas em Quilômetros<h1>
+        <p> Entre com as Milhas: <input type="text" id="milhas"></p>
+
+        <p id="estilo"> KM = ???</p>
+
+        <p><button type="button" onClick="onConvertClick()">Converter</button></p>
+  
+   </div>
+
+   <script>
+      var onConvertClick = function() {
+           var milhas = document.getElementById("milhas").value;
+           var estilo = document.getElementById("estilo");
+
+           if (isNaN(milhas)) {
+            console.log(milhas);
+             
+              estilo.textContent = "Desculpe, você não inseriu um número."
+           }else{
+              var kilo = 1.60934 * parseFloat(milhas);
+
+              estilo.textContent = "Quilômetros =" + kilo + "km.";
+
+            }
+
+      };
+
+   </script>
+
+  </body>
+
+
+   
+</html>

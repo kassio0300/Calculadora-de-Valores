@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Calculadora de Valores</title>
+  <style>
+      body {
+         margin: 40px;
+         background-color: #ffa500; 
+         font-size: 20px;
+      }
+
+  #estilo {
+          background-color:#cecece;
+          width: 230px;
+          padding: 10px;
+      }
+
+  #resultado {
+        border: 2px solid black;
+        padding: 15px;
+
+  }
+
+   </style>
+  </head>
+ <body>
+   <div id="resultado">
+      <h1> Conversor de Polegada para Centímetro<h1>
+        <p> Entre com a Polegada: <input type="text" id="polegada"></p>
+
+        <p id="estilo"> Centimetros = ???</p>
+
+        <p><button type="button" onClick="onConvertClick()">Converter</button></p>
+  
+   </div>
+
+   <script>
+      var onConvertClick = function() {
+           var polegada = document.getElementById("polegada").value;
+           var estilo = document.getElementById("estilo");
+
+           if (isNaN(polegada)) {
+            console.log(polegada);
+              
+              estilo.textContent = "Desculpe, você não inseriu um número."
+           }else{
+              var cent = 2.54 * parseFloat(polegada);
+
+              estilo.textContent = "Centimetros =" + cent + "cm.";
+
+            }
+
+      };
+
+   </script>
+
+  </body>
+
+
+   
+</html>
